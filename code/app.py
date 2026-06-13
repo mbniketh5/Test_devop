@@ -1,6 +1,6 @@
 import streamlit as st
 import sqlite3
-import bcrypt
+import bcrypt.git
 
 # Database Connection
 conn = sqlite3.connect('database.db', check_same_thread=False)
