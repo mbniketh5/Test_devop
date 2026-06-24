@@ -1,0 +1,12 @@
+Inatall tomcat server
+sudo systemctl stop tomcat
+sudo find / -name server.xml                            #which path server avl
+/opt/tomcat/conf/server.xml or /etc/tomcat/server.xml   #to change the port number
+#to change port --> edit both in-bond rule and out-bond rule  
+systex--> <Connector port="8080" protocol="HTTP/1.1"
+           connectionTimeout="20000"
+           redirectPort="8443" />     
+
+sudo ufw status                                         #to check aws connection
+sudo systemctl restart tomcat10                         #restart server
+sudo ss -tulpn | grep 9050                              #Verify Tomcat is actually bound to the port
